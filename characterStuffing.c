@@ -35,8 +35,7 @@ void bitStuffing(char *input) {
 int main() {
  int choice;
  char input[100];
- printf("Choose Framing Method:\n1. Character Stuffing\n2. Bit Stuffing\nEnter your
-choice: ");
+ printf("Choose Framing Method:\n1. Character Stuffing\n2. Bit Stuffing\nEnter yourchoice: ");
  scanf("%d", &choice);
  getchar(); // Consume newline character
  printf("Enter the data to be framed: ");
