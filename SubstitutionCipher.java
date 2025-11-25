@@ -20,9 +20,8 @@ public class SubstitutionCipher {
  // Method to decrypt text using substitution key
  public static String decrypt(String cipher, String key) {
  StringBuilder result = new StringBuilder();
- key = key.toUpperCase(
-    // Create reverse mapping
- char[] reverseKey = new char[26];
+ key = key.toUpperCase();
+char[] reverseKey = new char[26];
  for (int i = 0; i < 26; i++) {
  reverseKey[key.charAt(i) - 'A'] = (char) ('A' + i);
  }
@@ -46,7 +45,7 @@ public class SubstitutionCipher {
  // Validate key
  if (key.length() != 26 || !key.matches("[A-Za-z]+")) {
     System.out.println("Invalid key! Key must be 26 alphabetic characters.");
- return;
+
  }
  System.out.print("Enter text to encrypt: ");
  String text = sc.nextLine();
@@ -56,5 +55,6 @@ public class SubstitutionCipher {
  System.out.println("Key Used: " + key);
  System.out.println("Encrypted Text: " + encrypted);
  System.out.println("Decrypted Text: " + decrypted);
+ sc.close();
  }
 }
